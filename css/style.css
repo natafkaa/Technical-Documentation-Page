@@ -1,0 +1,91 @@
+body{
+  font-family: 'Open Sans', Arial;
+  font-size: 14;
+  line-height: 1.5;
+}
+
+/*Боковое меню*/
+#navbar{
+  height: 100%; /*высота*/
+  width: 300px; /* ширина боковой панели*/
+  position: fixed; /* фиксированная боковая панель (остается на месте при прокрутке)*/
+  z-index: 1; /* Верхним слоем*/
+  top: 0; /*отступ ссверху*/
+  left: 0; /*отступ слева*/
+  background-color: rgb(228,229,231); /*цвет фона*/
+  padding-top: 10px; /*отступ от верха до контента блока*/
+  border-right: 3px solid #99A2A2;
+}
+
+header{
+  font-size: 30px;
+  text-align: left;
+}
+
+#navbar header{
+  text-align: center;
+}
+
+#navbar ul{
+  overflow-x: hidden; /* горизонтальная прокрутка: нет;*/
+  overflow-y: auto; /* вертикальная прокрутка */
+  padding: 0;
+  height: 90%;
+}
+
+#navbar li{
+  list-style-type: none; /*нет маркеров*/
+  border-top: 1px solid; /*верхняя граница 1пиксель, сплошная*/
+  padding-left: 10px;
+}
+
+/*Ссылки меню навигации*/
+.nav-link{
+  padding: 10px;
+  text-decoration: none; /*без подчеркивания*/
+  font-size: 18px; /*размер шрифта*/
+  color: rgb(27,27,50); /*цвет текста*/
+  display: block; /*способ отображения элемента браузером: Блочный элемент.*/
+}
+
+/*При наведении курсора на навигационные ссылки*/
+.nav-link:hover{
+   color: #f1f1f1; /*цвет текста*/
+   background-color: rgb(27,27,50); /*заливка фона*/
+}
+
+/* Содержимое страницы */
+#main-doc {
+    margin-left: 310px; /* Same as the width of the sidebar */
+    padding: 10px 20px;
+    text-align: justify;
+}
+
+code{
+  display: block; /*блочный элемент*/
+  text-align: left; /*выравнивание по левому краю*/
+  white-space: pre-line; /*перенос слов*/
+  position: relative;
+  word-break: normal; /*определяет, где будет установлен перевод на новую строку в случае превышения текстом границ блока*/
+  word-wrap: normal; /* указывает, переносить или нет длинные слова, которые не помещаются по ширине в заданную область*/
+  line-height: 2;
+  background: rgb(235,235,235);
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.main-section li{
+  margin: 15px 0px 0px 20px;
+}
+
+.main-section a{
+  text-decoration: none;
+}
+
+
+    /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+    @media screen and (max-height: 450px) {
+        #navbar {padding-top: 15px;}
+        .nav-link {font-size: 18px;}
+    }
